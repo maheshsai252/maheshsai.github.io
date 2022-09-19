@@ -4,23 +4,54 @@
             Mahesh Portfolio
         </title>
         <link rel="stylesheet" type="text/css" href="./css/index-style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="./css/contact-style.css"> -->
+
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 
     </head>
     <body>
+    
         <div class="nav-container">
-             <div class="nav-icon">
-                <a href="contact.html" target="_blank">
-                    <span style='font-size: 50px;'>&#9995;</span>
+            <input id="show" type="checkbox">
+            <div id="content" class="nav-icon transit">
+                <a href="index.html#workex">
+                    Work Experience
+                    <!-- <span style='font-size: 50px;'>&#9995;</span> -->
+                </a>
+            </div>
+            <div id="content" class="nav-icon transit">
+                <a href="index.html#projects">
+                    Projects
+                    <!-- <span style='font-size: 50px;'>&#9995;</span> -->
+                </a>
+            </div>
+             <div id="content" class="nav-icon transit">
+                <a  href="index.html#contact">
+                    Contact
+                    <!-- <span style='font-size: 50px;'>&#9995;</span> -->
                 </a>
             </div> 
+            <div id="content" class="nav-icon transit">
+                <a href="https://maheshsai252.medium.com/" target="_blank">
+                    Read Articles
+                </a>
+            </div>
+            
+            <label id="hide" for="show" class="nav-icon">
+
+                <span style='font-size: 35px;'>☰</span>
+            </label> 
+            <label style="float:right;" id="content" for="show" class="nav-icon">
+
+            <span style='font-size: 35px;'>&#10060;</span>
+            </label>
         </div>
         <header class="header">
             <div class="header-text">
                 <h5>Hello There &#9995; I'm</h5>
                 <h1 class="name">Sai Durga Mahesh</h1>
                 <h4>Software Developer</h4>
-                <div style="display:inline-block;padding:10px;" >
+                <div style="display:inline-block;padding:2px;" >
                     <div class="header-tag">Swift</div>
                     <div class="header-tag">Python</div>
                     <div class="header-tag">AWS</div>
@@ -34,7 +65,7 @@
                 <!-- <p>
                      • Swift • Python • AWS • SwiftUI • SQL • Java Script • Node • Vue • Linux • React • Flask • Django
                 </p> -->
-                <p style="margin: 25px 50px 45px 0">
+                <p>
                     Graduating from Northeastern University
                 </p>
                 <a class="cva" target = "_blank" href="https://drive.google.com/file/d/1qUFU8wi0mROdQuyRql3QDK_HrOQHZXpa/view?usp=sharing">
@@ -47,10 +78,10 @@
             </div>
         </header>
         
-        <h1 style="font-family:cursive;font-style: italic;">
+        <h1 id="workex" style="font-family:cursive;font-style: italic;">
             Work Experience
         </h1>
-        <div class="projects">
+        <div  class="projects">
             
             
             <div class="card">
@@ -98,14 +129,20 @@
                 </div>
             </div>
         </div>
-        <h1 style="font-family:cursive;font-style: italic;">
+        <h1 id="projects" style="font-family:cursive;font-style: italic;">
             Projects
         </h1>
         <div class="projects">
             <div class="project-card">
+                <div style="display:flex;flex-direction:row;justify-items: center;justify-content: space-between;">
+
                 <h2 >
                     Project Tracker
                 </h2>
+                    <a href="projecttracker.html">
+                        <p class="tag">&#8595;</p>
+                    </a>
+                </div>
                 <p >
                     Project Tracker is an Application available for iOS, macOS and iPadOS which helps to track all your projects smartly.
 
@@ -125,9 +162,16 @@
                 </div>
             </div>
             <div class="project-card">
-                <h2 >
-                    Text Miner
-                </h2>
+                <div style="display:flex;flex-direction:row;justify-items: center;justify-content: space-between;">
+
+                        <h2 >
+                            Text Miner
+                        </h2>
+                        <a href="projecttracker.html">
+                            <p class="tag">&#8595;</p>
+                        </a>
+                    </div>
+                
                 <p >
                     Text miner is an Application available for iOS, iPadOS and macOS which helps in bringing Insights out of Text.
                 </p>
@@ -222,11 +266,48 @@
             <div data-iframe-width="350" data-iframe-height="270" data-share-badge-id="c0aa9bc9-76b8-4610-a5ba-dca8f7690f40" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
         </div>
 
-
-        <h1 style="font-family:cursive;font-style: italic;">
+        <h1>Certifications</h1>
+        <div id="gallery">
+        <ul>
+          <li>
+            <figure>
+                <img src="./images/CCP.png" 
+                width="200"   height="175" alt="Golden Gate Bridge">
+                <figcaption style="text-align: center;">
+                    <br>
+                   <em>Certified Cloud Practitioner</em> 
+                </figcaption>
+            </figure>
+          </li>
+          
+          <li>
+            <figure>
+                <img src="./images/SolutionsArchitect.png" 
+                width="200"   height="175" alt="Golden Gate Bridge">
+                <figcaption style="text-align: center;">
+                    <br>
+                   <em>Solutions Architect</em> 
+                </figcaption>
+            </figure>
+            
+          </li>
+          <li>
+            <figure>
+                <img src="./images/MlCertificate.png" 
+                width="200"   height="175" alt="Golden Gate Bridge">
+                <figcaption style="text-align: center;">
+                    <br>
+                   <em>Machine Learning Speacility</em> 
+                </figcaption>
+            </figure>
+           
+          </li>
+        </ul>
+        </div>
+        <h1 id="contact" style="font-family:cursive;font-style: italic;">
             Contact
         </h1>
-        <footer class="contact">
+        <footer  class="contact">
             <div class="contact-col">
                 <img src="./images/MaheshLatest.png" alt="maheshlatest" >
 
