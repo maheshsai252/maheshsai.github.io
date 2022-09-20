@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            Mahesh Portfolio
+            Mahesh | Software Dev
         </title>
         <link rel="stylesheet" type="text/css" href="./css/index-style.css">
         <!-- <link rel="stylesheet" type="text/css" href="./css/contact-style.css"> -->
@@ -10,9 +10,12 @@
 
     </head>
     <body>
-    
+        <input id="color-mode" type="checkbox" name="color-mode">
+        <div class="color-scheme-wrapper">
+
         <div class="nav-container">
             <input id="show" type="checkbox">
+            
             <div id="content" class="nav-icon transit">
                 <a href="index.html#workex">
                     Work Experience
@@ -46,6 +49,7 @@
             <span style='font-size: 35px;'>&#10060;</span>
             </label>
         </div>
+        
         <header class="header">
             <div class="header-text">
                 <h5>Hello There &#9995; I'm</h5>
@@ -190,6 +194,53 @@
                     <div class="tag">Sentiment Analysis</div>
                 </div>
             </div>
+            <div class="project-card">
+                <div style="display:flex;flex-direction:row;justify-items: center;justify-content: space-between;">
+
+                        <h2 >
+                            Multi Modal Sentiment Classification
+                        </h2>
+                       
+                    </div>
+                
+                <p >
+                    Dependency between modes (text, audio and video) is taken into account for obtaining sentiment.
+                </p>
+                <ul >
+                    <li>Extract unimodal contextual representations using self attention and Crossed Attention representations using cross attention layers.</li>
+                    <li> The generated features are fed to GRU resulting in Deep multi modal contextual representations. </li>
+                    <li>These representations for each utterance are concatenated and fed to Fully Connected layers followed by softmax layer for final sentiment.</li>
+                </ul>
+                <div style="display:inline-block;padding:10px;" >
+                    <div class="tag">Natural Language</div>
+                    <div class="tag">Pytorch</div>
+                    <div class="tag">Sentiment Analysis</div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div style="display:flex;flex-direction:row;justify-items: center;justify-content: space-between;">
+
+                        <h2 >
+                            UnderWater Sonar Image Classification using AW-CNN
+                        </h2>
+                       
+                    </div>
+                
+                <p >
+                    CNN is widely known for its application in image classification. However, there are some drawbacks even for this algorithm. So the application of CNN in every field has a variant of it. 
+                </p>
+                <ul >
+                    <li>AW-CNN is a variant of CNN solving random initialisation problem of CNN</li>
+                    <li>AW-CNN uses feature matrix constructed from DBN to initialise the CNN</li>
+                    <li>The accuracy of AW-CNN was 4% higher than CNN without any overfitting</li>
+                </ul>
+                <div style="display:inline-block;padding:10px;" >
+                    <div class="tag">CNN</div>
+                    <div class="tag">Pytorch</div>
+                    <div class="tag">Tensorflow</div>
+                    <div class="tag">Keras</div>
+                </div>
+            </div>
         </div>
         <h1 style="font-family:cursive;font-style: italic;">
             Skills
@@ -237,7 +288,7 @@
                     Web Development
                 </h2>
                 <p >
-                    HTML, CSS, BootStrap, JavaScript, PHP
+                    HTML, CSS, BootStrap, React JS, JavaScript, PHP, Node JS
                 </p>
                 
                 <div style="display:inline-block;padding:10px;" >
@@ -249,7 +300,7 @@
                     Natural Language Processing
                 </h2>
                 <p >
-                    Language Modelling, Named Entity Recognition, Entity Linking
+                    Language Modelling, Named Entity Recognition, Entity Linking, Question Answering
                 </p>
                 
                 <div style="display:inline-block;padding:10px;" >
@@ -266,8 +317,7 @@
             <div data-iframe-width="350" data-iframe-height="270" data-share-badge-id="c0aa9bc9-76b8-4610-a5ba-dca8f7690f40" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
         </div>
 
-        <!--      
-        <h1 style="font-family:cursive;font-style: italic;">
+        <!-- <h1 style="font-family:cursive;font-style: italic;">
             Certifications
         </h1>
         <div id="gallery">
@@ -306,7 +356,7 @@
            
           </li>
         </ul>
-        </div> -->
+        </div>  -->
         <h1 id="contact" style="font-family:cursive;font-style: italic;">
             Contact
         </h1>
@@ -340,6 +390,8 @@
             </div>
             
         </footer>
+    </div>
+        
     </body>
     
 
