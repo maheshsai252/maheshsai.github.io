@@ -1,0 +1,97 @@
+
+.color-scheme-wrapper {
+    background:white;
+    color:black;
+}
+    
+/* Checkbox for night mode */
+#night-mode {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    appearance: none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -o-appearance : none;
+    width: 80px;
+    height: 35px;
+    background: gray;
+    border-radius: 22px;
+    cursor: pointer;
+    outline: none;
+    z-index: 3;
+    &:checked ~ .color-scheme-wrapper{
+        
+        background: set-text-color(false);
+        color: $text-my-color;
+        border-radius: 30px;
+        padding: 2%;
+        padding-bottom: 0%;
+        h5,h1,h4 {
+            color: white;
+        }
+        
+        .header p {
+            color: white;
+        }
+        .icon img {
+            background-color: rgb(222, 212, 212);
+            border-radius: 35%;
+        }
+        #gallery {
+            figure {
+                border: thin white solid;
+            }
+            figcaption {
+                color: white;
+            }
+        }
+        .contact {
+            h1 {
+                color: black;
+            }
+        }
+
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 45px;
+        height: 35px;
+        background-color: #e6beae;
+        border-radius: 35px;
+        top: 0px;
+        left: 0px;
+        cursor: pointer;
+        transition: .4s linear;
+    }
+    &:checked::before {
+        left: 35px;
+        background-color: white;
+    }
+}
+.nav-container {
+    padding-right: 20px;
+    position: fixed;
+   
+    top: 10px;
+    right: 20px;
+    align-items: center;
+    z-index:2;
+}
+
+.nav-icon {
+    float: right;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #002855 ;
+    background-color: white;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    border: 3px solid #002855;   
+    &:hover {
+        border: 2px solid #cfb98e;
+        background-color: #cfb98e;
+    } 
+}
