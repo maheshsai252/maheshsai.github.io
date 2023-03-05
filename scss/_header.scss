@@ -1,0 +1,69 @@
+.header {
+    margin-top: 100px;
+    margin-left: 40px;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    p {
+        margin: 25px 50px 45px 0;
+        color: grey;
+        letter-spacing: 2px;
+    }
+}
+.header-tag {
+    border: 1px solid $text-my-color ;
+    background-color: $text-my-color;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+    font-family: Arial, sans-serif;
+    font-size: smaller;
+    display: inline-block;
+}
+
+h5 {
+    font-size:20px;
+    letter-spacing: 3px;
+}
+.cva {
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-family: Calibre-SemiBold,sans-serif; 
+    letter-spacing: 3px;
+    border: 1px solid olivedrab; 
+    background-color: olivedrab;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: small;
+    &:hover {
+        border-radius: 0px;   
+    }
+}
+
+h2 {
+    padding-left: 10px;
+    text-decoration: underline;
+    text-decoration-color: #002855;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    animation: underline-animation 4s ease-in infinite;
+
+}
+/* icon css */
+
+.icon {
+    img {
+        @extend %img-diamensions;
+    }
+    /* border-radius: 50%; */
+    /* background: white; */
+}
+.header-text {
+    position: relative;
+    /* right: 60px; */
+}

@@ -1,0 +1,133 @@
+.projects {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+}
+.project-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-gap: 40px;
+    align-items: center;
+}
+.skills {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 20px;
+    padding-left: 10px;
+}
+.project-card {
+    color: #011c3b;
+    background-image: linear-gradient(to left bottom, #cfb98e, #d7c89f, #dfd7b0, #e8e5c2, #f2f4d4);
+    border-radius: 15px;
+    height: 500px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: auto;
+    a {
+        text-decoration: underline;
+        font-size: smaller;
+        &:hover {
+            font-size: large;
+            color: brown;
+            /* border: 2px dotted gray; */
+            border-radius: 50%;
+            text-decoration: line-through;
+            margin: 0%;
+            padding: 0%;
+        }
+    }
+}
+
+/* Skills CSS */
+.skills-card {
+    color: $text-my-color;
+    background-image: linear-gradient(135deg,#e6beae 10%,#e7d8c9);
+    padding: 5px;
+    border-radius: 15px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    p {
+        padding-left: 10px ;
+        font-weight: bold;
+        font-style: italic;
+        color: #020202;
+    
+    }
+}
+.card {
+    color: $text-my-color;
+    background-image: linear-gradient(135deg,#e6beae 10%,#e7d8c9);
+    padding: 5px;
+    border-radius: 15px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    p {
+        padding-left: 10px;
+        padding-bottom: 0px;
+    }
+}
+.name {
+    letter-spacing: 4px;
+    font-family: cursive;
+    font-weight: bolder;
+    animation: color-animation 5s linear infinite;
+    --color-1: ;
+    --color-2: ;
+}
+@mixin color($color) {
+    color: $color;
+}
+@mixin text-decoration($label,$id) {
+    @if $label == 50 {
+        #{$id}: $h4_color;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 6px;
+    } @else if $label == 0 {
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+    } @else {
+        #{$id}: $h4_color;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+    }
+}
+@keyframes color-animation {
+    0%    {@include color($color: #DF8453)}
+    30%   {color: #002855}
+    40%   {color: #DF8453}
+    60%   {color: #3D8DAE}
+    75%   {color: #DF8453;}
+    90%   {color: #3D8DAE;}
+    100%  {color: #DF8453;}
+}
+@keyframes underline-animation {
+    0%    {
+        @include text-decoration(0,"line1");
+    }
+    50%   {
+        @include text-decoration(50,"line2");
+
+    }
+    100%   {
+        @include text-decoration(100,"line3");
+    }
+}
+.tag {
+    border: 1px solid $text-my-color;
+    background-color: $text-my-color;
+    color: wheat;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+    font-family: Arial, sans-serif;
+    font-size: smaller;
+    display: inline-block;
+}
